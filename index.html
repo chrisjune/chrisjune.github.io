@@ -53,8 +53,15 @@
     </style>
   </head>
   <body>
-    <t-5">          <div class="card">
-            <s="banne                <div class="form-group">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="card">
+            <div class="banner"></div>
+            <div class="card-body"><h2>엘릿 전문직 인증</h2></div>
+            <div class="card-body">
+              <form id="loginForm">
+                <div class="form-group">
                   <label for="email">메일주소:</label>
                   <input
                     type="email"
@@ -68,12 +75,20 @@
                     등록하신 메일주소를 작성해주세요</small
                   >
                 </div>
-                <p"p
+                <div class="form-group">
+                  <label for="name">닉네임:</label>
+                  <input
+                    type="text"
+                    class="form-control"
                     id="name"
                     name="name"
                     required
                   />
-                  <text text-muted"div>
+                  <small class="form-text text-muted"
+                    >닉네임을 “직업명_닉네임” 규칙으로 변경 후에 작성해주세요
+                    (ex. 회계사_호랑이)</small
+                  >
+                </div>
                 <div class="form-group">
                   <label for="phoneNumber">연락처:</label>
                   <input
@@ -91,7 +106,8 @@
                 </div>
                 <!-- <label>직업:</label> -->
                 <!-- <div class="form-group">
-                    <s="form-id="doctor" value="doctor">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="jobtype" id="doctor" value="doctor">
                         <label class="form-check-label" for="doctor">의사</label>
                     </div>
                     <div class="form-check">
@@ -99,35 +115,53 @@
                         <label class="form-check-label" for="lawyer">변호사</label>
                     </div>
                     <div class="form-check">
-                        <="accountant">s="form-check-label" for="accountant">회계사</label>
+                        <input class="form-check-input" type="radio" name="jobtype" id="accountant" value="accountant">
+                        <label class="form-check-label" for="accountant">회계사</label>
                     </div>
-                    <uttype" id="dentist" value="dentist">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="jobtype" id="dentist" value="dentist">
                         <label class="form-check-label" for="dentist">약사</label>
                     </div>
                 </div> -->
-                <orm-group"e                    type="file"
+                <div class="form-group">
+                  <label for="imageFile">면허증 사진:</label><br />
+                  <input
+                    type="file"
                     class="form-control-file"
                     id="imageFile"
                     name="imageFile"
                     accept="image/*"
                   />
-                  <text-muted"                 - 모든 인증서류는 확인 후 폐기합니다.
+                  <small class="form-text text-muted">
+                    <p>
+                    - 면허증 도용/위조 따른 책임은 유저 당사자에게 있습니다.<br/>
+                    - 모든 인증서류는 확인 후 폐기합니다.
                     </p>
                   </small>
                 </div>
                 <button type="submit" class="btn btn-secondary" id="submit-btn">
                   전문직 인증 신청하기
-                </button   <script>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
       document
         .getElementById("loginForm")
         .addEventListener("submit", function (event) {
           event.preventDefault();
-          const name = document.getElementById"tElementById("email").value;
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
           const phoneNumber = document.getElementById("phoneNumber").value;
         //   const jobtype = document.querySelector(
         //     'input[name="jobtype"]:checked'
         //   ).value;
-          const imageFile = document.getElementById("imageFile").files[0; !imageFile) {
+          const imageFile = document.getElementById("imageFile").files[0];
+          if (!name || !email || !phoneNumber || !imageFile) {
             alert("Please fill out all fields.");
             return;
           }
@@ -163,38 +197,3 @@
     </script>
   </body>
 </html>
-
-          if (!name || !email || !phoneNumber ||]name").value;
-          const email = document.ge(
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
- >      - 면허증 도용/위조 따른 책임은 유저 당사자에게 있습니다.<br/>
-    >
-                    <p>
-             small class="form-text ">면허증 사진:</label><br />
-                  <input
->
-                  <label for="imageFildiv class="f class="form-check-input" type="radio" name="jobv class="form-check">
-                        <inpdi
-                        <label clasinput class="form-check-input" type="radio" name="jobtype" id="accountant" valuecheck">
-                        <input class="form-check-input" type="radio" name="jobtype" div clas
-                    >닉네임을 “직업명_닉네임” 규칙으로 변경 후에 작성해주세요
-                    (ex. 회계사_호랑이)</small
-                  >
-                </small class="form-e="text"
-                    class="form-control">
-                  <label for="name">닉네임:</label>
-                  <input
-                    tydiv class="form-grour"></div>
-            <div class="card-body"><h2>엘릿 전문직 인증</h2></div>
-            <div class="card-body">
-              <form id="loginForm">
-div clas
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6">
-div class="container m
